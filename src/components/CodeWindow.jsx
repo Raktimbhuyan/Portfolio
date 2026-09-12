@@ -52,14 +52,14 @@ export default function CodeWindow() {
   })
 
   return (
-    <div className="glass rounded-xl shadow-glow overflow-hidden animate-floaty">
+    <div className="glass rounded-xl shadow-glow overflow-hidden animate-floaty overflow-x-auto">
       <div className="flex items-center gap-1.5 px-4 py-3 border-b border-ink-border bg-ink-panel2/60">
         <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
         <span className="ml-3 font-mono text-xs text-muted">developer.js</span>
       </div>
-      <div className="p-6 font-mono text-sm leading-7">
+      <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-6 sm:leading-7">
         {visibleLines.map((line, idx) => (
           <div key={line.n} className="flex">
             <span className="w-6 text-right pr-4 select-none text-white/20">{line.n}</span>

@@ -105,7 +105,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24, rotate: -1 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: 'easeOut' }}
-          className="hidden md:block"
+          className="mt-10 md:mt-0"
         >
           <CodeWindow />
         </motion.div>
