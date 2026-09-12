@@ -20,7 +20,7 @@ const fadeUp = {
 export default function About() {
   return (
     <section id="about" className="py-24 md:py-32 px-6 md:px-8">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -33,12 +33,19 @@ export default function About() {
           </h2>
           <div className="space-y-4 text-muted text-base leading-relaxed max-w-md">
             <p>
-              I&apos;m a Computer Science undergraduate with a strong interest in technology and software development. I enjoy learning new technologies, exploring how things work, and turning ideas into practical applications. I&apos;m particularly interested in full-stack development and problem solving, and I&apos;m continuously working on improving my skills by building projects and learning through hands-on experience.
+              I&apos;m a Computer Science undergraduate at Assam Down Town University with a strong interest in technology and software development. I enjoy learning how different technologies work and exploring new tools to expand my knowledge.
             </p>
+            <p>I&apos;m particularly interested in full-stack development and enjoy building applications that turn ideas into practical solutions. I&apos;m also passionate about problem solving and continuously work on improving my programming and development skills.
+            </p>
+            <p>
+            As I continue my journey in software development, I&apos;m focused on learning through hands-on projects, strengthening my technical foundation, and preparing myself to contribute to real-world development teams.
+            </p>
+
+
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
           {INFO_CARDS.map(({ icon: Icon, label }, i) => (
             <motion.div
               key={label}
