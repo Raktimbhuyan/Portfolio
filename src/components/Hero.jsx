@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, ArrowDown, FileDown } from 'lucide-react'
+import { Github, Linkedin, Mail, ArrowDown} from 'lucide-react'
 import CodeWindow from './CodeWindow'
 
 const container = {
@@ -69,14 +69,6 @@ export default function Hero() {
               className="px-5 py-3 rounded-lg border border-ink-border text-fog font-medium text-sm hover:border-violet-signal/50 hover:text-violet-signal transition-colors"
             >
               Contact Me
-            </a>
-            <a
-              href="/resume.pdf"
-              download
-              className="flex items-center gap-2 px-5 py-3 rounded-lg text-muted font-medium text-sm hover:text-fog transition-colors"
-            >
-              <FileDown size={16} />
-              Download Resume
             </a>
           </motion.div>
 

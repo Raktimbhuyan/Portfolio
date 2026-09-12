@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        cyanPulse: '#5EEAD4',
         ink: {
           DEFAULT: '#0B0E14',
           50: '#F5F6F8',
@@ -21,6 +22,7 @@ export default {
         ink900: '#0B0E14',
         muted: '#8B93A7',
         fog: '#E7E9EE',
+        
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],

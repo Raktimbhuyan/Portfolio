@@ -28,7 +28,7 @@ export default function About() {
           variants={fadeUp}
         >
           <p className="font-mono text-sm text-amber-glow mb-3">About</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-fog mb-6">
+          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-[#F3E8D0] hover:text-[#F2B84B] transition-colors duration-300 mb-6">
             About me
           </h2>
           <div className="space-y-4 text-muted text-base leading-relaxed max-w-md">
