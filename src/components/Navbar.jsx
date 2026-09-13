@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useActiveSection } from '../hooks/useActiveSection'
 
@@ -78,31 +78,29 @@ export default function Navbar() {
         </button>
       </nav>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.ul
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-ink/95 backdrop-blur-md border-b border-ink-border"
-          >
-            {NAV_LINKS.map((link) => (
-              <li key={link.id} className="border-t border-ink-border first:border-t-0">
-                <a
-                  href={`#${link.id}`}
-                  onClick={(e) => handleNavClick(e, link.id)}
-                  className={`block px-6 py-3.5 text-sm font-medium ${
-                    activeSection === link.id ? 'text-amber-glow' : 'text-fog'
-                  }`}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </motion.ul>
-        )}
-      </AnimatePresence>
+      <ul
+        className="md:hidden overflow-hidden bg-ink/95 backdrop-blur-md border-b border-ink-border"
+        style={{
+          maxHeight: menuOpen ? '400px' : '0px',
+          opacity: menuOpen ? 1 : 0,
+          pointerEvents: menuOpen ? 'auto' : 'none',
+          transition: 'max-height 300ms ease, opacity 300ms ease',
+        }}
+      >
+        {NAV_LINKS.map((link) => (
+          <li key={link.id} className="border-t border-ink-border first:border-t-0">
+            <a
+              href={`#${link.id}`}
+              onClick={(e) => handleNavClick(e, link.id)}
+              className={`block px-6 py-3.5 text-sm font-medium ${
+                activeSection === link.id ? 'text-amber-glow' : 'text-fog'
+              }`}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </header>
   )
 }
